@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ExpenseTracking</string>
+    <string name="category_name">Enter Category Name</string>
+    <string name="btn_add_category">Add</string>
+    <string name="spinner_text">Select Category</string>
+    <string name="expense_title">Enter Expense Title</string>
+    <string name="expense_amt">Enter Expense Amount</string>
+    <string name="expense_description">Enter Expense Description</string>
+    <string name="rupee_symbol">$</string>
+</resources>
