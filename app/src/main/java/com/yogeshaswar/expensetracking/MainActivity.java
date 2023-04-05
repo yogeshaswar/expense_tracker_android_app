@@ -21,11 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView addExpense, addCategory, showExpense, manageMoney;
+    ImageView addExpense, addCategory, showExpense, manageMoney, addNote;
     private MAViewModel maViewModel;
-    List<Expense> expenses = new ArrayList<>();
     Spinner spinnerCategory;
-    SpinnerAdapter categoryData;
     List<String> categoriesList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +32,6 @@ public class MainActivity extends AppCompatActivity {
         initiateUI();
         clickHandler();
 //        populateCategoryList();
-
-
-        // Array of Months acting as a data pump
-
-
         maViewModel = new ViewModelProvider(this).get(MAViewModel.class);
         List<Category> allCategories = maViewModel.getAllCategories();
         for (int i = 0; i <allCategories.size() ; i++) {
@@ -68,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, ManageMoney.class);
             startActivity(intent);
         });
+        addNote.setOnClickListener((v) -> {
+            Intent intent = new Intent(MainActivity.this, Note.class);
+            startActivity(intent);
+        });
     }
 
     private void SpinnerClicksHandler() {
@@ -89,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadSpinner(List<String> categories) {
 
-        ArrayAdapter adapter = new ArrayAdapter(
+        ArrayAdapter<String> adapter = new ArrayAdapter(
                 getApplicationContext(),android.R.layout.simple_list_item_1 ,categories);
 
         spinnerCategory.setAdapter(adapter);
@@ -102,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
         addCategory = (ImageView) findViewById(R.id.add_new_category);
         showExpense = (ImageView) findViewById(R.id.show_all_expenses);
         manageMoney = (ImageView) findViewById(R.id.manage_money);
+        addNote = (ImageView) findViewById(R.id.add_note);
     }
 
     private List<Expense> getAllExpensesFromDB() {

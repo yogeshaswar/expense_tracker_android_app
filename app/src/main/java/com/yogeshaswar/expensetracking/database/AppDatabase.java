@@ -14,13 +14,14 @@ import com.yogeshaswar.expensetracking.models.Expense;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Category.class, Expense.class}, version = 2, exportSchema = false)
+@Database(entities = {Category.class, Expense.class}, version = 3, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "expense.db";
 
     // abstract dao methods
     public abstract CategoryDAO categoryDAO();
     public abstract ExpenseDAO expenseDAO();
+    public abstract NoteDAO noteDAO();
 
     // database instance
     private static AppDatabase INSTANCE;
@@ -41,11 +42,8 @@ public abstract class AppDatabase extends RoomDatabase {
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-
             // Insert data when db is created...
             InitializeData();
-
-
         }
     };
 
@@ -55,12 +53,13 @@ public abstract class AppDatabase extends RoomDatabase {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                // Categories
-                Category all = new Category();
-                all.setCategoryName("All Expenses");
-                all.setCategoryDescription("All your expenses will be shown in this category");
+                //Categories
+                Category categories = new Category();
+                categories.setCategoryName("Categories");
+                categories.setCategoryDescription("Rent, Food, Electricity, Bills, etc.");
+                categories.setCategoryId(0);
 
-                categoryDAO.insert(all);
+                categoryDAO.insert(categories);
             }
         });
     }

@@ -34,13 +34,14 @@ public class ExpenseAdapter extends RecyclerView.Adapter<ExpenseAdapter.ExpenseV
     @Override
     public void onBindViewHolder(@NonNull ExpenseViewHolder holder, int position) {
         if(expenses.size() == 0) {
-            holder.title.setText("Expenses will be shown here");
+//            holder.title.setText("Expenses will be shown here");
         } else {
             //        holder.title.setText(expenses.get(position).getExpenseTitle());
             holder.amount.setText(String.valueOf(expenses.get(position).getExpenseAmount()));
 
             holder.title.setText(expenses.get(position).getExpenseTitle());
         }
+        // TODO: add data and time and show on expense card
 
     }
 

@@ -70,9 +70,14 @@ public class ShowExpense extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        if (id == 0) {
+            loadRecyclerView(expenseList);
+        } else {
+            List<Expense> selectedCategoryExpenses = maViewModel.getSelectedCategoryExpenses((int) id);
+            loadRecyclerView(selectedCategoryExpenses);
+        }
 
-        List<Expense> selectedCategoryExpenses = maViewModel.getSelectedCategoryExpenses((int) id);
-        loadRecyclerView(selectedCategoryExpenses);
+
     }
 
     @Override
