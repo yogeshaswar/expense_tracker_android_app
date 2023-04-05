@@ -41,6 +41,10 @@ https://user-images.githubusercontent.com/117707959/229959466-d6d2e047-182f-4992
 5. Money Habit Tracker: Trying to built habit of saving..? 
 This feature will definately help. this feature will allow you to add new saving habit with amount and will also track, notify and congratulate you on your habit.
 
+6. chat with your family members (who are also using this app), share your favorite finacial articles, videos, achievements, etc.
+
 More features are on the way...
+
+
 
 
