@@ -25,9 +25,13 @@ https://user-images.githubusercontent.com/117707959/229959455-304000a3-13bf-471a
 Upcoming feature:
 1. Manage Money: You just enter your monthly salary and this feature will help you know how you can manage that amount in 6 categories.
 (User can also customise the amount of money for every category according to users choice)
+
+
 https://user-images.githubusercontent.com/117707959/229959462-f0cb1bcf-1759-4d06-9de6-d99550a9d3c9.mp4
 
 2. Notes: User can save notes, important finacial artical or video links etc.
+
+
 https://user-images.githubusercontent.com/117707959/229959466-d6d2e047-182f-4992-8a34-a2921b66fb1b.mp4
 
 3. Firebase authentication: user can use this app on any android device
