@@ -9,6 +9,8 @@
     android:orientation="vertical"
     tools:context=".ShowExpense">
 
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,6 +30,7 @@
                 android:layout_weight="1"
                 android:gravity="end"
                 android:layout_marginBottom="4dp"/>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

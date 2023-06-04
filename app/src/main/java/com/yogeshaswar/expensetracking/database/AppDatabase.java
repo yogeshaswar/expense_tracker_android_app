@@ -14,7 +14,7 @@ import com.yogeshaswar.expensetracking.models.Expense;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Category.class, Expense.class}, version = 3, exportSchema = false)
+@Database(entities = {Category.class, Expense.class}, version = 2, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
     private static final String DATABASE_NAME = "expense.db";
 
@@ -64,3 +64,4 @@ public abstract class AppDatabase extends RoomDatabase {
         });
     }
 }
+

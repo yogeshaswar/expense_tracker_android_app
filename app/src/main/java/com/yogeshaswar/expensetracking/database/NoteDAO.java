@@ -13,6 +13,7 @@ import java.util.List;
 @Dao
 public interface NoteDAO {
 // TODO : start here
+//    Room Data migration - java1
 //    @Insert
 //    void insert(NoteModel note);
 //    @Delete
@@ -22,6 +23,8 @@ public interface NoteDAO {
 //    // update method using query
 //    @Query("UPDATE note_table SET title=:title, note=:note WHERE id=:id")
 //    void update(int id, String title, String note);
+
+    // S Ride
 
 
 }
